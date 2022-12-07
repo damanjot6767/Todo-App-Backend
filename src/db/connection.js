@@ -3,10 +3,7 @@ require("dotenv").config();
 
 const MONGO_URL=process.env.MONGO_URL
 const connect = async()=>{
-    return mongoose.connect(MONGO_URL, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-      })
+    return mongoose.connect(MONGO_URL)
 }
 
 module.exports=connect;
